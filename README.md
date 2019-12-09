@@ -2,6 +2,7 @@ For running local machine use
 ## Installation
 * Install [mysql](https://dev.mysql.com/doc/)
 * Install [NodeJS](https://nodejs.org/en/download/)
+* Install [PostManCollectionForAPI](https://www.getpostman.com/collections/f8f21dd457ff019f20f7/)
 * `sudo apt install npm`  // for ubuntu 
 * `npm install`
 * `sequelize db:migrate`

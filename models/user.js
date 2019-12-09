@@ -1,7 +1,7 @@
 const {sequelize ,Sequelize} = require('./index')
 const User = sequelize.define('user', {
     // attributes
-    id: {
+    user_id: {
         type: Sequelize.INTEGER(11),
         allowNull: false,
         autoIncrement : true,
@@ -9,7 +9,7 @@ const User = sequelize.define('user', {
       },
     email: {
         isEmail: true,
-        uni: true,
+        unique: true,
         allowNull: false,
         type: Sequelize.STRING
       },
