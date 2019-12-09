@@ -9,3 +9,6 @@ For running local machine use
 * `sequelize db:migrate`
 * `npm run start dev`
 * Open your browser on http://127.0.0.1:3000
+
+Important links
+* [sequelize](https://sequelize.org/master/manual/getting-started.html)
