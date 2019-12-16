@@ -12,3 +12,4 @@ For running local machine use
 
 ## Important links
 * [sequelize](https://sequelize.org/master/manual/getting-started.html)
+* creating new migration `sequelize migration:create --name migration_name_here`
