@@ -26,25 +26,19 @@ const userSchema = {
   }, 
 }
 const User = sequelize.define('user', userSchema, {
-    // createdAt: false,
-    // updatedAt: false,
     hooks: {
       beforeCreate: async function (user) {
         const salt = await bcryptjs.genSalt(8)
         user.password = await bcryptjs.hash(user.password, salt)
-      }
-    },
-    instanceMethods: {
-      // validPassword: async function(password) {
-      //   console.log(password);
-      //   // const salt = bcryptjs.genSaltSync(8);
-      //   // return bcryptjs.compareSync(password, this.password);
-      //   return await bcryptjs.compare(password, this.password);
-      // }
+      },
+      beforeUpdate: async function (user) {
+        const salt = await bcryptjs.genSalt(8)
+        user.password = await bcryptjs.hash(user.password, salt)
+      }      
     }
   });
 
 User.prototype.validPassword = async function(password) {
     return await bcryptjs.compare(password, this.password);
 }
-  module.exports = User
+module.exports = User
