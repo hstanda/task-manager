@@ -7,7 +7,7 @@ For running local machine use
 * `npm install`
 * `Add database logins to /config/config.json`
 * `sequelize db:migrate`
-* `npm run start dev`
+* `npm run dev`
 * Open your browser on http://127.0.0.1:3000
 
 ## Important links
