@@ -9,6 +9,7 @@ app.use(formidable());
 // const tasksRouter = require('./routers/tasks')
 app.use(require('./routers/users'));
 app.use(require('./routers/tasks'));
+app.use(require('./routers/roles'));
 
 app.get('*', (request, response)=>{
     response.send({'status':'0','data':'Not a valid URL'})
